@@ -1,4 +1,4 @@
 #Acts as environment
 
-require_relative "./horoscope/version"
-require_relative "./horoscope/cli"
+require_relative "./horoscopes/version"
+require_relative "./horoscopes/cli"
