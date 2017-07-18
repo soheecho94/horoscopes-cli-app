@@ -48,6 +48,35 @@ class Horoscopes::CLI
     while answer != "exit"
       answer = gets.strip.downcase
       case answer
+    input = gets.strip
+    case input
+    when "1"
+      today_match
+    when "2"
+      puts today_match
+    when "3"
+      puts today_match
+    end
+  end
+
+  # def today_match
+  #   puts "Today's Matches:"
+  #   puts "Love - "
+  #   puts "Friendship - "
+  #   puts "Career - "
+  #   puts "------------"
+  #   horoscope_reading
+  # end
+
+  def horoscope_reading
+    puts "Please choose a horoscope reading or type menu for list of zodiac signs or exit to leave:"
+    puts "A. Sun Sign"
+    puts "B. Love"
+    puts "C. Career"
+    input = ""
+    while input != "exit"
+      input = gets.strip.downcase
+      case input
       when "a"
         puts "Sun Sign:"
       when "b"
@@ -57,6 +86,7 @@ class Horoscopes::CLI
       when "menu"
         list_zodiac
         main_menu
+      end
     end
   end
 
