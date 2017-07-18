@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require "./lib/horoscope"
+require "./lib/horoscopes"
 
-Horoscope::CLI.new.call
+Horoscopes::CLI.new.call
