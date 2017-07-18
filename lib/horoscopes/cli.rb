@@ -11,6 +11,9 @@ class Horoscopes::CLI
 
   def list_zodiac
     @list = Horoscopes::Zodiacs.signs
+    @list.each do |sign|
+      puts "#{sign.number}. #{sign.name}"
+    end
   end
 
   def main_menu
