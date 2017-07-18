@@ -18,55 +18,14 @@ class Horoscopes::CLI
 
   def main_menu
     puts "Please enter the number of your zodiac sign from the list above:"
-      input = gets.strip
-      case input
-      when "1"
+      input = gets.strip.to_i
+      if input > 0 && input <= 12
         horoscope_reading
-      when "2"
-        horoscope_reading
-      when "3"
-        horoscope_reading
+      else
+        puts "Looks like that doesn't exist in the stars..."
+        main_menu
       end
     end
-  end
-
-  # def today_match
-  #   puts "Today's Matches:"
-  #   puts "Love - "
-  #   puts "Friendship - "
-  #   puts "Career - "
-  #   puts "------------"
-  #   horoscope_reading
-  # end
-
-  def horoscope_reading
-    puts "Please choose a horoscope reading or type menu for the list of zodiac signs or exit to leave:"
-    puts "A. Sun Sign"
-    puts "B. Love"
-    puts "C. Career"
-    answer = ""
-    while answer != "exit"
-      answer = gets.strip.downcase
-      case answer
-    input = gets.strip
-    case input
-    when "1"
-      today_match
-    when "2"
-      puts today_match
-    when "3"
-      puts today_match
-    end
-  end
-
-  # def today_match
-  #   puts "Today's Matches:"
-  #   puts "Love - "
-  #   puts "Friendship - "
-  #   puts "Career - "
-  #   puts "------------"
-  #   horoscope_reading
-  # end
 
   def horoscope_reading
     puts "Please choose a horoscope reading or type menu for list of zodiac signs or exit to leave:"
