@@ -19,7 +19,9 @@ class Horoscopes::CLI
   def main_menu
     puts "Please enter the number of your zodiac sign from the list above:"
       input = gets.strip.to_i
-      if input > 0 && input <= 12
+      if input == 1
+        puts "Today's reading:"
+        puts Horoscopes::Readings.aries
         horoscope_reading
       else
         puts "Looks like that doesn't exist in the stars..."
@@ -28,23 +30,16 @@ class Horoscopes::CLI
     end
 
   def horoscope_reading
-    puts "Please choose a horoscope reading or type menu for list of zodiac signs or exit to leave:"
-    puts "A. Sun Sign"
-    puts "B. Love"
-    puts "C. Career"
+    puts "Please type menu for list of zodiac signs or exit to leave:"
     input = ""
     while input != "exit"
       input = gets.strip.downcase
       case input
-      when "a"
-        puts "Sun Sign:"
-      when "b"
-        puts "Love:"
-      when "c"
-        puts "Career:"
       when "menu"
         list_zodiac
         main_menu
+      else
+        puts "Please type menu for list of zodiac signs or exit to leave:"
       end
     end
   end
