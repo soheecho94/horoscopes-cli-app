@@ -92,12 +92,11 @@ class Horoscopes::CLI
     input = ""
     while input != "exit"
       input = gets.strip.downcase
-      case input
-      when "menu"
+      if input == "menu"
         list_zodiac
         main_menu
       else
-        puts "Please type menu for list of zodiac signs or exit to leave:"
+        horoscope_reading
       end
     end
   end
