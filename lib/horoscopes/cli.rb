@@ -4,15 +4,15 @@ class Horoscopes::CLI
 
   def call
     puts "Welcome to daily horoscopes!"
+    Horoscopes::Scraper.new.signs
     list_zodiac
     main_menu
     goodbye
   end
 
   def list_zodiac
-    @list = Horoscopes::Zodiacs.signs
-    @list.each do |sign|
-      puts "#{sign.number}. #{sign.name}"
+    Horoscopes::Zodiacs.all.each.with_index(1) do |sign, index|
+      puts "#{index}. #{sign.name}"
     end
   end
 
@@ -20,7 +20,7 @@ class Horoscopes::CLI
     puts "Please enter the number of your zodiac sign from the list above:"
       readings = Horoscopes::Readings.reading
       input = gets.strip.to_i
-      if readings[input - 1].number == input
+      if input <= Horoscopes::Zodiacs.signs.size
         readings[input - 1].reading
         horoscope_reading
       else
