@@ -7,12 +7,11 @@ class Horoscopes::CLI
     Horoscopes::Scraper.new.signs
     list_zodiac
     main_menu
-    goodbye
   end
 
   def list_zodiac
     Horoscopes::Zodiacs.all.each.with_index(1) do |sign, index|
-      puts "#{index}. #{sign.name}"
+      puts "#{index}. #{sign.name}: #{sign.birthday}"
     end
   end
 
@@ -31,16 +30,15 @@ class Horoscopes::CLI
 
   def horoscope_reading
     puts "Please type menu for list of zodiac signs or exit to leave:"
-    answer = ""
-    while answer != "exit"
-      answer = gets.strip.downcase
-      case answer
+    answer = gets.strip.downcase
+    case answer
+	  when "exit"
+		goodbye
       when "menu"
         list_zodiac
         main_menu
       else
         horoscope_reading
-      end
     end
   end
 

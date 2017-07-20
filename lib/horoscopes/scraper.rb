@@ -7,6 +7,7 @@ class Horoscopes::Scraper
 
       sign.name = signs.css("h3").text
       sign.number = signs.css("a").attribute('href').value[-1]
+      sign.birthday = signs.css("p").text
 
       sign.save
     end
