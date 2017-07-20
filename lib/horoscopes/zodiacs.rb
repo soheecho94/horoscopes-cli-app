@@ -1,5 +1,5 @@
 class Horoscopes::Zodiacs
-  attr_accessor :name, :number, :date, :reading
+  attr_accessor :name, :number, :reading
   @@list = []
 
   def self.signs
@@ -13,7 +13,5 @@ class Horoscopes::Zodiacs
    end
   @@list
   end
-
-
 
 end
