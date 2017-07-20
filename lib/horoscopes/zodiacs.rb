@@ -9,6 +9,7 @@ class Horoscopes::Zodiacs
     sign = self.new
     sign.name = zodiac
     sign.number = index.to_i + 1
+    sign.reading = nil
     @@list << sign
    end
   @@list
