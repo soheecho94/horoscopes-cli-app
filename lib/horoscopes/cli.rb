@@ -5,7 +5,6 @@ class Horoscopes::CLI
   def call
     puts "Welcome to daily horoscopes!"
     Horoscopes::Scraper.new.signs
-    Horoscopes::Scraper.new.reading
     list_zodiac
     main_menu
     goodbye
@@ -22,7 +21,7 @@ class Horoscopes::CLI
       input = gets.strip.to_i
       if input <= Horoscopes::Zodiacs.all.size
         puts "Today's Reading:"
-        Horoscopes::Zodiacs.all[input - 1].reading
+        puts Horoscopes::Scraper.new.reading[input - 1].reading
         horoscope_reading
       else
         puts "Looks like that doesn't exist in the stars..."
@@ -32,10 +31,10 @@ class Horoscopes::CLI
 
   def horoscope_reading
     puts "Please type menu for list of zodiac signs or exit to leave:"
-    input = ""
-    while input != "exit"
-      input = gets.strip.downcase
-      case input
+    answer = ""
+    while answer != "exit"
+      answer = gets.strip.downcase
+      case answer
       when "menu"
         list_zodiac
         main_menu
