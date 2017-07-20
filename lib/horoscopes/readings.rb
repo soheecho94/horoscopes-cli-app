@@ -10,6 +10,7 @@ class Horoscopes::Readings
       Horoscopes::Zodiacs.signs[number - 1].reading = sign_reading
       @signs << sign_reading
     end
+    @signs
   end
 
 end
