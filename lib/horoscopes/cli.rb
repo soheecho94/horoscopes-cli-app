@@ -1,5 +1,4 @@
 #CLI Controller
-
 class Horoscopes::CLI
 
   def call

@@ -1,3 +1,0 @@
-class Horoscopes::Readings
-
-end
