@@ -18,7 +18,7 @@ class Horoscopes::CLI
   def main_menu
     puts "Please enter the number of your zodiac sign from the list above:"
       input = gets.strip.to_i
-      if input <= Horoscopes::Zodiacs.all.size
+      if input.between?(1, Horoscopes::Zodiacs.all.size)
         puts "Today's Reading:"
         puts Horoscopes::Scraper.new.reading[input - 1].reading
         horoscope_reading

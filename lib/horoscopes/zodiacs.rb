@@ -9,4 +9,8 @@ class Horoscopes::Zodiacs
   def save
     @@list << self
   end
+
+  def self.sort_by_name
+    @@list.sort_by {|sign| sign.name}
+  end
 end
