@@ -31,13 +31,13 @@ class Horoscopes::CLI
     puts "Please type menu for list of zodiac signs or exit to leave:"
     answer = gets.strip.downcase
     case answer
-	  when "exit"
-		goodbye
-      when "menu"
-        list_zodiac
-        main_menu
-      else
-        horoscope_reading
+    when "exit"
+		  goodbye
+    when "menu"
+      list_zodiac
+      main_menu
+    else
+      horoscope_reading
     end
   end
 
