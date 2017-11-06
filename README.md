@@ -24,4 +24,4 @@ Install and run the gem to check your daily horoscope! Choose your sign and read
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'soheecho94-58096'/horoscopes.
+Please report all issues [here](https://github.com/soheecho94/horoscopes-cli-app/issues). 
