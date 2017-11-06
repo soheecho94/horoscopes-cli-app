@@ -6,8 +6,8 @@ require 'horoscopes/version'
 Gem::Specification.new do |spec|
   spec.name          = "horoscopes"
   spec.version       = Horoscopes::VERSION
-  spec.authors       = ["'Sohee Cho'"]
-  spec.email         = ["'soheecho94@gmail.com'"]
+  spec.authors       = ["Sohee Cho"]
+  spec.email         = ["soheecho94@gmail.com"]
 
   spec.summary       = %q{Check your daily horoscopes here!}
   spec.description   = %q{CLI Ruby gem that lets you check your daily horoscope readings.}
@@ -33,5 +33,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry", "~> 0"
 
-  spec.add_dependency "nokogiri", "~> 0"
+  spec.add_dependency "nokogiri"
 end
