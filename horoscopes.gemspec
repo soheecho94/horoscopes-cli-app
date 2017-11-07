@@ -5,7 +5,7 @@ require 'horoscopes/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "horoscopes"
-  spec.version       = Horoscopes::VERSION
+  spec.version       = "0.1.1"
   spec.authors       = ["Sohee Cho"]
   spec.email         = ["soheecho94@gmail.com"]
 
