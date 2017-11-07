@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/horoscopes"
+require "bundler/setup"
+require_relative "../lib/horoscopes"
 
 Horoscopes::CLI.new.call
